@@ -1,5 +1,11 @@
-<?php 
-        //create block_identifier static block
-        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('block_identifier')->toHtml();?>
+<?php
 
-<?php echo __('<div style="font-size: 16px;padding: 15px; font-weight: 800;text-align: center;">Free Shipping for all Orders</div>'); ?>
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+?>
+<div class="top-line-wrapper">
+    <div class="top-line">
+        <h2><?= $block->escapeHtml($block->getData('title')) ?></h2>
+    </div>
+</div>
